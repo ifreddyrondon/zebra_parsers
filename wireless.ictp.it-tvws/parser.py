@@ -85,7 +85,7 @@ def parser_sqlite_in_current_folder():
             rows = cur.fetchall()
             for row in rows:
                 row = list(row)
-                captures = row[4:captures_4_scan + 4]
+                captures = row[8:captures_4_scan + 8]
                 # get the location for loctime, latitude, longitude
                 location_id = row[2]
                 q2 = "SELECT id, loctime, latitude, longitude FROM location WHERE id = {}".format(location_id)
